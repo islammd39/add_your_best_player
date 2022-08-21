@@ -1,0 +1,26 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.carousal {
+    background-image:
+        linear-gradient(to bottom, rgba(39, 45, 39, 0.438), rgba(50, 52, 29, 0.499)),
+        url('images/carousal-photo.jpg');
+    height: 80vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-img{
+    height: 50vh;
+    width: 100%;
+}
+
+.foot{
+    height: 20vh;
+    width: 100vw;
+    background-color: #191616;
+    margin-top: 3rem;
+}
