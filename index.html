@@ -39,8 +39,8 @@
                                   <div class="card bg-dark border-0">
                                     <img src="images/Adam Gilchrist.jpg" class="card-img-top card-img" alt="...">
                                     <div class="card-body mx-auto">
-                                      <h5 class="card-title text-white">Adam Gilchrist</h5>
-                                      <button class="btn btn-primary px-5 mt-2">Select</button>
+                                      <h5 id="adam-gilchrist" class="card-title text-white">Adam Gilchrist</h5>
+                                      <button id="btn-slt-adam"  onclick="getSelect(this), disabled = true" class="btn btn-primary px-5 mt-2">Select</button>
                                     </div>
                                   </div>
                                 </div>
@@ -48,8 +48,8 @@
                                   <div class="card bg-dark border-0">
                                     <img src="images/Brett Lee.jpg" class="card-img-top card-img" alt="...">
                                     <div class="card-body mx-auto">
-                                      <h5 class="card-title text-white">Brett Lee</h5>
-                                      <button class="btn btn-primary px-5 mt-2">Select</button>
+                                      <h5 id="brett-lee" class="card-title text-white">Brett Lee</h5>
+                                      <button id="btn-slt-lee"  onclick="getSelect(this), disabled = true" class="btn btn-primary px-5 mt-2">Select</button>
                                     </div>
                                   </div>
                                 </div>
@@ -57,8 +57,8 @@
                                   <div class="card bg-dark border-0">
                                     <img src="images/mushfiqur rahim.jpg" class="card-img-top card-img" alt="...">
                                     <div class="card-body mx-auto">
-                                      <h5 class="card-title text-white">mushfiqur rahim</h5>
-                                      <button class="btn btn-primary px-5 mt-2">Select</button>
+                                      <h5 id="mushfiqur-rahim" class="card-title text-white">Mushfiqur Rahim</h5>
+                                      <button id="btn-slt-mushfiqur"  onclick="getSelect(this), disabled = true" class="btn btn-primary px-5 mt-2">Select</button>
                                     </div>
                                   </div>
                                 </div>
@@ -66,8 +66,8 @@
                                   <div class="card bg-dark border-0">
                                     <img src="images/hardik pandya.jpg" class="card-img-top card-img" alt="...">
                                     <div class="card-body mx-auto">
-                                      <h5 class="card-title text-white">hardik pandya</h5>
-                                      <button class="btn btn-primary px-5 mt-2">Select</button>
+                                      <h5 id="hardik-pandya" class="card-title text-white">Hardik pandya</h5>
+                                      <button id="btn-slt-pandya"  onclick="getSelect(this), disabled = true" class="btn btn-primary px-5 mt-2">Select</button>
                                     </div>
                                   </div>
                                 </div>
@@ -75,8 +75,8 @@
                                   <div class="card bg-dark border-0">
                                     <img src="images/m.s .dhoni.jpg" class="card-img-top card-img" alt="...">
                                     <div class="card-body mx-auto">
-                                      <h5 class="card-title text-white">m.s .dhoni</h5>
-                                      <button class="btn btn-primary px-5 mt-2">Select</button>
+                                      <h5 id="m-s-dhoni" class="card-title text-white">M.S .Dhoni</h5>
+                                      <button id="btn-slt-dhoni"  onclick="getSelect(this), disabled = true" class="btn btn-primary px-5 mt-2">Select</button>
                                     </div>
                                   </div>
                                 </div>
@@ -84,14 +84,48 @@
                                   <div class="card bg-dark border-0">
                                     <img src="images/virat kohli.jpg" class="card-img-top card-img" alt="...">
                                     <div class="card-body mx-auto">
-                                      <h5 class="card-title text-white">virat kohli</h5>
-                                      <button class="btn btn-primary px-5 mt-2">Select</button>
+                                      <h5 id="virat-kohli" class="card-title text-white">Virat kohli</h5>
+                                      <button id="btn-slt-kohli" onclick="getSelect(this), disabled = true" class="btn btn-primary px-5 mt-2">Select</button>
                                     </div>
                                   </div>
                                 </div>
                               </div>
                         </div>
-                        <div class="col-6 col-md-4 ">.col-6 .col-md-4</div>
+                        <div class="col col-md-4 mx-auto">
+                            <div class="card text-white bg-dark mb-3 ms-3">
+                               
+                                <div class="card-body">
+                                  <h4 class="card-title text-center">Selected - V</h4>
+                                
+                                    <ol id="order-list"></ol>
+
+                                </div>
+                              </div>
+                            <div class="card text-white bg-dark mb-3 ms-3">
+                               
+                                <div class="card-body">
+                                  <h4 class="card-title text-center my-3">Budget</h4>
+                                  <label for="name">Per Player :</label>
+                                  <input type="text" name="" id="Per-Player" class="w-100">
+                                  <div class="text-center">
+                                    <button id="btn-calculate" class="btn-primary px-4 py-1 my-3">Calculate</button>
+                                  </div>
+                                  <p>Player Expenses : $ <span id="player-expenses" class="ms-4">0</span></p>
+                                   <div class="my-3">
+                                    <label for="name">Manager :</label>
+                                    <input type="text" name="" id="manager-cost" class="w-100">
+                                   </div>
+                                  <div class="my-3">
+                                    <label for="name">Coach :</label>
+                                    <input type="text" name="" id="choch-cost" class="w-100">
+                                  </div>
+                                  <div class="text-center">
+                                    <button id="btn-total" class="btn-primary px-4 py-1 my-3">Total Calculate</button>
+                                  </div>
+                                  <p>Total : $ <span id="total" class="ms-4">0</span></p>
+                                </div>
+                              </div>
+                        </div>
                       </div>
                 </div>
             </section>
@@ -99,8 +133,8 @@
 
 
         <footer>
-            <section class="foot">
-                 
+            <section class="foot d-flex align-items-center justify-content-center">
+                 <h5 class="text-white text-center">Copyright @ 2022 All Rights Reserved.</h5>
             </section>
         </footer>
 
@@ -110,8 +144,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-
     <script src="main.js"></script>
+    <script src="function.js"></script>
+    <script src="calculate.js"></script>
 </body>
 
 </html>
