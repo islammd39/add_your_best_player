@@ -1,16 +1,16 @@
-
-const playerList = []
+const playerList = [];
 
 function display(players) {
 
     const orderList = document.getElementById('order-list');
     orderList.innerHTML = '';
     for (let i = 0; i < playerList.length; i++) {
+
         const playerName = playerList[i].playerName;
         const order = document.createElement('div');
         order.innerHTML = `
         <li>${playerName}</li>
-      
+
         `;
         orderList.appendChild(order);
 
@@ -20,12 +20,15 @@ function display(players) {
 
 function getSelect(elementId) {
     const playerName = elementId.parentNode.children[0].innerText;
-
-    const playerOjt = {
-        playerName: playerName,
-    };
-    playerList.push(playerOjt);
-
-    display(playerList);
+    
+    if(playerList.length <= 4){
+        const playerOjt = {
+            playerName: playerName,
+        };
+        playerList.push(playerOjt);
+        display(playerList);
+    }else{
+        alert("Already selected 5 playrs")
+    }
 
 };
